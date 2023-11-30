@@ -1,0 +1,14 @@
+*.pdf
+**/db
+**/simulation
+**/output_files
+**/incremental_db
+**/greybox_tmp
+**/*.png
+**/*.rpt
+**/*.json
+**/**.bak
+**/**.sopcinfo
+**/**.q*
+!**/**.qpf
+leads/microphone/micADC
