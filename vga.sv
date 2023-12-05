@@ -39,7 +39,7 @@ module vga(
     //Counter block: change hc and vc correspondingly to the current state.
 	always @(posedge vgaclk) begin
 		 //reset condition
-		if (rst == 0) begin
+		if (rst) begin
 			hc <= 0;
 			vc <= 0;
 		end else

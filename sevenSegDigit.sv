@@ -1,4 +1,4 @@
-module sevenSegDigit(input [3:0] decimalNum, output reg [7:0] dispBits);
+module sevenSegDigit(input [3:0] decimalNum, input onSwitch, input [7:0] extra, output reg [7:0] dispBits);
 	always_comb begin
 		case (decimalNum)
 			4'b0000: begin
@@ -31,27 +31,30 @@ module sevenSegDigit(input [3:0] decimalNum, output reg [7:0] dispBits);
 			4'b1001: begin
 				dispBits = 8'b10010000;
 			end
+			
 			4'b1010: begin
-				dispBits = 8'b10001000; // A
+				dispBits = 8'b10001000;
 			end
 			4'b1011: begin
-				dispBits = 8'b10000011; // b
+				dispBits = 8'b10000011;
 			end
 			4'b1100: begin
-				dispBits = 8'b10000110; // c
+				dispBits = 8'b11000110;
 			end
 			4'b1101: begin
-				dispBits = 8'b10100001; // d
+				dispBits = 8'b10100001;
 			end
 			4'b1110: begin
-				dispBits = 8'b10000110; // E
+				dispBits = 8'b10000110;
 			end
 			4'b1111: begin
-				dispBits = 8'b10001110; // F
+				dispBits = 8'b10001110;
 			end
+			
 			default: begin
 				dispBits = 8'b11111111;
 			end
 		endcase
 	end
+
 endmodule
