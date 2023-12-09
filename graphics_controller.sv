@@ -1,12 +1,13 @@
 module graphics_controller(
     input [6:0] x,
     input [6:0] y,
+	 input [1:0] state,
 	 input [3:0] buttons [0:7],
     output reg [7:0] color
 );
 
 	wire [7:0] bs1_color;
-	bomb_stage_1 bs1(x, y, bs1_color);
+	bomb_stage_1 bs1(x, y, state, bs1_color);
 
 	wire [6:0] yme = y - 11;
 	

@@ -65,7 +65,11 @@ module game_controller(
 	always_comb begin
 		for (integer i = 0; i < 12; i = i + 1) begin
 			controls_pulsed[i] = controls_srs[i] == 2'b01;
-			expected_controls[i] = (i == display_buttons[0]);
+			if (i >= 6) begin
+				expected_controls[i] = ((i + 2) == display_buttons[0]);
+			end else begin
+				expected_controls[i] = (i == display_buttons[0]);
+			end
 		end
 		
 		case (state)

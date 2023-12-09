@@ -12,12 +12,12 @@ module lfsr(
 	localparam A1 = 4'b0100;
 	localparam B1 = 4'b0101;
 	// player 2
-	localparam UP2 = 4'b0000;
-	localparam DOWN2 = 4'b0001;
-	localparam RIGHT2 = 4'b0010;
-	localparam LEFT2 = 4'b0011;
-	localparam A2 = 4'b0100;
-	localparam B2 = 4'b0101;
+	localparam UP2 = 4'b1000;
+	localparam DOWN2 = 4'b1001;
+	localparam RIGHT2 = 4'b1010;
+	localparam LEFT2 = 4'b1011;
+	localparam A2 = 4'b1100;
+	localparam B2 = 4'b1101;
 
     reg [15:0] state; // LFSR state register
 

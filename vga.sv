@@ -57,8 +57,8 @@ module vga(
 		end
 	end
 
-	assign hsync = ~((hc >= HFP) && (hc < (HFP + HPULSE))); //TODO
-	assign vsync = ~((vc >= VFP) && (vc < (VFP + VPULSE))); //TODO
+	assign hsync = ~((hc >= HFP) && (hc < (HFP + HPULSE)));
+	assign vsync = ~((vc >= VFP) && (vc < (VFP + VPULSE)));
 	
     //RGB output block: set red, green, blue outputs here.
 	always_comb begin
